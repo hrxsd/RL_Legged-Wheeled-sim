@@ -16,22 +16,22 @@ The project was done on Ubuntu20.04 with the following Python versions and libra
 The project consists of three folders, a main file, a test file, and four other function files. These programs can be divided into three parts: the robot environment, the results, and the algorithms.
 
 ### 1. Environmental files
-The robot simulation environment is mainly written in the **envs** folder, which consists of the **asset** folder, the file named **biped.py**, and the file named **register.py**.
+The robot simulation environment is mainly written in the **envs** folder, which consists of the **asset** folder, the file named `biped.py`, and the file named `register.py`.
 
-**biped.py** encapsulates environment reset, step environment update (including reward function), status feedback, etc. The main function is to encapsulate the information of the robot inside the mujoco emulator through Python interface. **register.py** is the bootstrap file to guide the project to locate biped.py.
+`biped.py` encapsulates environment reset, step environment update (including reward function), status feedback, etc. The main function is to encapsulate the information of the robot inside the mujoco emulator through Python interface. `register.py` is the bootstrap file to guide the project to locate biped.py.
 
-The **asset** folder mainly contains the mujoco simulator, Legged_wheel.xml, Legged_wheel.xml1, Legged_wheel.xml2, Legged_wheel.xml3 are four different simulation scenarios. **meshes** folder stores the robot parts in **stl** form.
+The **asset** folder mainly contains the mujoco simulator, `Legged_wheel.xml`, `Legged_wheel.xml1`, `Legged_wheel.xml2`, `Legged_wheel.xml3` are four different simulation scenarios. **meshes** folder stores the robot parts in **stl** form.
 
 ### 2. Results file of the training
-The trained neural network model is recorded in the **models** folder and called by **test.py**. The runtime data is recorded in the **runs** folder. To view the data, go to the runs folder and use the command:
+The trained neural network model is recorded in the **models** folder and called by `test.py`. The runtime data is recorded in the **runs** folder. To view the data, go to the runs folder and use the command:
 ```
 tensorboard --logdir=[filename]
 ```
 ![image](https://github.com/hrxsd/RL_Legged-Wheeled-sim/blob/master/legged_wheeled_mujoco/023-08-02%2016%3A23%3A54.png)
 
 ### 3. Reinforcement learning algorithm file
-**main.py** is the main training program, the algorithm is **SAC (sac.py)** and the neural network model is written in Pytorch **(model.py)**. 
-Since SAC is offline reinforcement learning, it requires **replay_memory (replay_memory.py)**. **utils.py** defines some script functions.
+`main.py` is the main training program, the algorithm is **SAC (`sac.py`)** and the neural network model is written in Pytorch **(`model.py`)**. 
+Since SAC is offline reinforcement learning, it requires **replay_memory (`replay_memory.py`)**. `utils.py` defines some script functions.
 
 ## Usage
 1. Install MuJoco 210
