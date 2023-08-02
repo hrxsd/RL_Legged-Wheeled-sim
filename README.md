@@ -27,4 +27,5 @@ The robot simulation environment is mainly written in the **envs** folder, which
 The **asset** folder mainly contains the mujoco simulator, Legged_wheel.xml, Legged_wheel.xml1, Legged_wheel.xml2, Legged_wheel.xml3 are four different simulation scenarios. **meshes** folder stores the robot parts in **stl** form.
 
 ### Results file of the training
-The trained neural network model is recorded in the models folder and called by test.py. The runtime data is recorded in the runs folder. To view the data, go to the runs folder and use the command line:
+The trained neural network model is recorded in the models folder and called by test.py. The runtime data is recorded in the runs folder. To view the data, go to the runs folder and use the command:
+    <!--tensorboard --logdir=filename-->
