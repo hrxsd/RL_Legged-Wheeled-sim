@@ -1,7 +1,7 @@
 # RL_Legged-Wheeled-sim
 
 ## Introduction
-This project is a simulation of a two-legged-wheeled robot based on a reinforcement learning approach. The simulator used is **MuJoco**. The specific approach is to firstly encapsulate the robot as a standard reinforcement learning Python interface according to the **gym** style, including state feedback, action, reward function, reset, etc. The robot is then used to interact with the mujoco model through the Pytorch framework. Secondly, the **SAC** algorithm is built through pytorch framework to interact with the MuJoco model to make the robot reach the goal point.
+This project is a simulation of a two-legged-wheeled robot based on a deep reinforcement learning approach. The simulator used is **MuJoco**. The specific approach is to firstly encapsulate the robot as a standard reinforcement learning Python interface according to the **gym** style, including state feedback, action, reward function, reset, etc. The robot is then used to interact with the mujoco model through the Pytorch framework. Secondly, the **SAC** algorithm is built through pytorch framework to interact with the MuJoco model to make the robot reach the goal point.
 
 ## Environment Configuration
 The project was done on Ubuntu20.04 with the following Python versions and library versions:
@@ -16,4 +16,15 @@ The project was done on Ubuntu20.04 with the following Python versions and libra
 ### 3. Create a conda environment
 ### 4. Install mujoco-py, gym and pytorch
 
-## 
+## Clarification
+The project consists of three folders, a main file, a test file, and four other function files. These programs can be divided into three parts: the robot environment, the results, and the algorithms.
+
+### Environmental files
+The robot simulation environment is mainly written in the **envs** folder, which consists of the **asset** folder, the file named **biped.py**, and the file named **register.py**.
+
+**biped.py** encapsulates environment reset, step environment update (including reward function), status feedback, etc. The main function is to encapsulate the information of the robot inside the mujoco emulator through python interface. **register.py** is the bootstrap file to guide the project to locate biped.py.
+
+The **asset** folder mainly contains the mujoco simulator, Legged_wheel.xml, Legged_wheel.xml1, Legged_wheel.xml2, Legged_wheel.xml3 are four different simulation scenarios. **meshes** folder stores the robot parts in **stl** form.
+
+### Results file of the training
+The trained neural network model is recorded in the models folder and called by test.py. The runtime data is recorded in the runs folder. To view the data, go to the runs folder and use the command line:
