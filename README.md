@@ -28,4 +28,8 @@ The **asset** folder mainly contains the mujoco simulator, Legged_wheel.xml, Leg
 
 ### Results file of the training
 The trained neural network model is recorded in the models folder and called by test.py. The runtime data is recorded in the runs folder. To view the data, go to the runs folder and use the command:
-    <!--tensorboard --logdir=filename-->
+```
+tensorboard --logdir=[filename]
+```
+
+
