@@ -11,10 +11,6 @@ The project was done on Ubuntu20.04 with the following Python versions and libra
 * mujoco-py 2.1.2.14
 * pytorch 1.10.0
 * numpy 1.21.6
-### 1. Install MuJoco 210
-### 2. Install Anaconda
-### 3. Create a conda environment
-### 4. Install mujoco-py, gym and pytorch
 
 ## Clarification
 The project consists of three folders, a main file, a test file, and four other function files. These programs can be divided into three parts: the robot environment, the results, and the algorithms.
@@ -31,5 +27,10 @@ The trained neural network model is recorded in the **models** folder and called
 ```
 tensorboard --logdir=[filename]
 ```
+## Usage
+### 1. Install MuJoco 210
+### 2. Install Anaconda
+### 3. Create a conda environment
+### 4. Install mujoco-py, gym and pytorch
 
 
