@@ -30,8 +30,8 @@ tensorboard --logdir=[filename]
 ![image](https://github.com/hrxsd/RL_Legged-Wheeled-sim/blob/master/legged_wheeled_mujoco/023-08-02%2016%3A23%3A54.png)
 
 ### 3. Reinforcement learning algorithm file
-`main.py` is the main training program, the algorithm is **SAC (`sac.py`)** and the neural network model is written in Pytorch **(`model.py`)**. 
-Since SAC is offline reinforcement learning, it requires **replay_memory (`replay_memory.py`)**. `utils.py` defines some script functions.
+`main.py` is the main training program, the algorithm is **SAC**(`sac.py`) and the neural network model is written in Pytorch(`model.py`). 
+Since SAC is offline reinforcement learning, it requires **replay_memory**(`replay_memory.py`). `utils.py` defines some script functions.
 
 ## Usage
 1. Install MuJoco 210
