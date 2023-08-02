@@ -11,3 +11,9 @@ The project was done on Ubuntu20.04 with the following Python versions and libra
 * mujoco-py 2.1.2.14
 * pytorch 1.10.0
 * numpy 1.21.6
+### 1. Install MuJoco 210
+### 2. Install Anaconda
+### 3. Create a conda environment
+### 4. Install mujoco-py, gym and pytorch
+
+## 
